@@ -63,7 +63,9 @@ jobs:
     - name: Autobuild
 #       uses: github/codeql-action/autobuild@v2
       run: |
-        cd packages/app-mobile/android
+        cd packages/app-mobile
+        yarn install
+        cd android
         ./gradlew build
 
     # ℹ️ Command-line programs to run using the OS shell.
